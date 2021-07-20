@@ -1,0 +1,29 @@
+
+
+== Scope
+
+Clone from example https://github.com/spring-guides/gs-spring-boot.git and use 
+bom instead of spring parent.
+
+== Test
+
+----
+
+mvn spring-boot:run
+  
+http://localhost:8080/actuator
+
+----
+
+== Docker
+
+----
+
+mvn spring-boot:build-image
+
+docker run --rm -p 8080:8080 docker.io/library/dev-simple:0.0.1-SNAPSHOT
+
+http://localhost:8080/actuator
+
+----
+
